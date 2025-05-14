@@ -185,7 +185,7 @@ export default defineComponent({
         subtitle:
           'Experience the difference yourself — get your free trial today and start feeling lighter and better.',
         fields: {
-          firstName: 'First Name*',
+          firstName: 'Name*',
           lastName: 'Last Name*',
           phone: 'Phone number*',
           email: 'E-mail*',

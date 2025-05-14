@@ -1,8 +1,8 @@
 <template>
   <section id="free-trial" class="py-6 md:py-16 px-4 md:px-10 lg:px-20 bg-[#b2d7d7] md:bg-transparent">
     <div class="container mx-auto">
-      <div class="flex flex-col items-center">
-        <h2 class="text-lg md:text-3xl font-bold text-[#003B39] md:text-primary-dark text-center mb-2 md:mb-4">
+      <div class="flex flex-col items-start">
+        <h2 class="text-lg uppercase md:text-3xl font-bold text-[#003B39] md:text-primary-dark text-center mb-2">
           {{ formData.title }}
         </h2>
         <p class="text-xs md:text-base text-[#003B39] md:text-navy text-center mb-6 md:mb-8">
@@ -10,7 +10,7 @@
         </p>
       </div>
 
-      <form class="space-y-3 md:space-y-4" @submit.prevent="submitForm">
+      <form class="space-y-3 md:space-y-10" @submit.prevent="submitForm">
         <div class="flex flex-col gap-3 md:gap-4">
           <div>
             <input
@@ -32,101 +32,104 @@
           </div>
         </div>
 
-        <div>
-          <input
-            v-model="form.phone"
-            type="tel"
-            :placeholder="formData.fields.phone"
-            class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
-            required
-          />
-        </div>
-
-        <div>
-          <input
-            v-model="form.email"
-            type="email"
-            :placeholder="formData.fields.email"
-            class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
-            required
-          />
-        </div>
-
-        <div>
-          <input
-            v-model="form.address1"
-            type="text"
-            :placeholder="formData.fields.address1"
-            class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
-            required
-          />
-        </div>
-
-        <div>
-          <input
-            v-model="form.address2"
-            type="text"
-            :placeholder="formData.fields.address2"
-            class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
-          />
-        </div>
-
-        <div>
-          <input
-            v-model="form.city"
-            type="text"
-            :placeholder="formData.fields.city"
-            class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
-            required
-          />
-        </div>
-
-        <div>
-          <input
-            v-model="form.postalCode"
-            type="text"
-            :placeholder="formData.fields.postalCode"
-            class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
-            required
-          />
-        </div>
-
-        <div class="flex items-start">
-          <div class="flex items-center h-5">
-            <input id="promo-code" v-model="form.hasPromoCode" type="checkbox" class="custom-check" />
+        <div class="flex flex-col gap-3 md:gap-4">
+          <div>
+            <input
+              v-model="form.phone"
+              type="tel"
+              :placeholder="formData.fields.phone"
+              class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
+              required
+            />
           </div>
-          <label for="promo-code" class="ml-2 text-xs md:text-sm text-[#003B39] md:text-navy">
-            {{ formData.checkboxes.promoCode }}
-          </label>
-        </div>
 
-        <div class="flex items-start">
-          <div class="flex items-center h-5">
-            <input id="newsletter" v-model="form.newsletter" type="checkbox" class="custom-check" />
+          <div>
+            <input
+              v-model="form.email"
+              type="email"
+              :placeholder="formData.fields.email"
+              class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
+              required
+            />
           </div>
-          <label for="newsletter" class="ml-2 text-xs md:text-sm text-[#003B39] md:text-navy">
-            {{ formData.checkboxes.newsletter }}
-          </label>
         </div>
-
-        <div class="flex items-start">
-          <div class="flex items-center h-5">
-            <input id="subscription" v-model="form.subscription" type="checkbox" class="custom-check" required />
+        <div class="flex flex-col gap-3 md:gap-4">
+          <div>
+            <input
+              v-model="form.address1"
+              type="text"
+              :placeholder="formData.fields.address1"
+              class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
+              required
+            />
           </div>
-          <label for="subscription" class="ml-2 text-xs md:text-sm text-[#003B39] md:text-navy">
-            {{ formData.checkboxes.subscription }}
-          </label>
-        </div>
 
-        <div class="flex items-start">
-          <div class="flex items-center h-5">
-            <input id="terms" v-model="form.termsAndConditions" type="checkbox" class="custom-check" required />
+          <div>
+            <input
+              v-model="form.address2"
+              type="text"
+              :placeholder="formData.fields.address2"
+              class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
+            />
           </div>
-          <label for="terms" class="ml-2 text-xs md:text-sm text-[#003B39] md:text-navy">
-            {{ formData.checkboxes.terms }}
-          </label>
-        </div>
 
+          <div>
+            <input
+              v-model="form.city"
+              type="text"
+              :placeholder="formData.fields.city"
+              class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
+              required
+            />
+          </div>
+
+          <div>
+            <input
+              v-model="form.postalCode"
+              type="text"
+              :placeholder="formData.fields.postalCode"
+              class="w-full p-2 md:p-3 border bg-[#01A9AC4D] placeholder:text-[#003B39] rounded-[10px] border-secondary focus:outline-none ring-2 ring-primary text-sm md:text-base"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 md:gap-4">
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input id="promo-code" v-model="form.hasPromoCode" type="checkbox" class="custom-check" />
+            </div>
+            <label for="promo-code" class="ml-2 font-semibold text-xs md:text-sm text-[#003B39] md:text-navy">
+              {{ formData.checkboxes.promoCode }}
+            </label>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input id="newsletter" v-model="form.newsletter" type="checkbox" class="custom-check" />
+            </div>
+            <label for="newsletter" class="ml-2 text-xs md:text-sm text-[#003B39] md:text-navy">
+              {{ formData.checkboxes.newsletter }}
+            </label>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input id="subscription" v-model="form.subscription" type="checkbox" class="custom-check" required />
+            </div>
+            <label for="subscription" class="ml-2 text-xs md:text-sm text-[#003B39] md:text-navy">
+              {{ formData.checkboxes.subscription }}
+            </label>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input id="terms" v-model="form.termsAndConditions" type="checkbox" class="custom-check" required />
+            </div>
+            <label for="terms" class="ml-2 text-xs md:text-sm text-[#003B39] md:text-navy">
+              {{ formData.checkboxes.terms }}
+            </label>
+          </div>
+        </div>
         <button
           type="submit"
           style="
@@ -166,7 +169,7 @@ defineProps({
       title: 'TRY BIODIGESTIN™ FOR FREE',
       subtitle: 'Experience the difference yourself — get your free trial today and start feeling lighter and better.',
       fields: {
-        firstName: 'First Name*',
+        firstName: 'Name*',
         lastName: 'Last Name*',
         phone: 'Phone number*',
         email: 'E-mail*',
