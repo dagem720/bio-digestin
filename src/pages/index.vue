@@ -277,14 +277,6 @@ export default defineComponent({
           return `https://backend.artroshield.de/storage/${imagePath}`;
         };
 
-        const parseDisclaimers = (disclaimerText) => {
-          if (!disclaimerText) return pageData.value.freeTrial.disclaimers;
-
-          // Remove HTML tags and split by line breaks
-          const cleanText = stripHtmlTags(disclaimerText);
-          return cleanText.split(/\r?\n/).filter((line) => line.trim() !== '');
-        };
-
         const extractFirstPart = (text) => {
           if (!text) return '';
           const parts = text.split('at');
@@ -411,9 +403,9 @@ export default defineComponent({
             },
             submitButton: data.signup_form_section?.submit_button_text || pageData.value.freeTrial.submitButton,
             submitting: 'Processing...',
-            disclaimers: data.signup_form_section?.disclaimer_text
-              ? parseDisclaimers(data.signup_form_section?.disclaimer_text)
-              : pageData.value.freeTrial.disclaimers,
+            disclaimers: data.signup_form_section?.disclaimer_text ?? pageData.value.freeTrial.disclaimers,
+            withdrawalButton: data.signup_form_section?.withdrawal_button_text || '',
+            withdrawalButtonLink: data.signup_form_section?.withdrawal_button_link || '',
           },
           footer: {
             contactTitle: data.footer_section?.first_heading

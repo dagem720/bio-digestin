@@ -1,5 +1,5 @@
 <template>
-  <section class="py-6 px-4 bg-[#b2d7d7]">
+  <section class="py-6 px-4 md:px-10 lg:px-20 bg-[#b2d7d7]">
     <div class="container mx-auto">
       <!-- Mobile layout -->
       <div class="md:hidden">
@@ -10,13 +10,18 @@
           {{ sectionData.subtitle }}
         </p>
 
-        <div class="space-y-6">
-          <div v-for="(benefit, index) in sectionData.benefits" :key="index" class="flex items-center space-x-4">
+        <div class="space-y-2 md:space-y-6">
+          <div
+            v-for="(benefit, index) in sectionData.benefits"
+            :key="index"
+            class="flex items-center space-x-4"
+            :class="{ 'justify-end': index % 2 !== 0 }"
+          >
             <div class="w-12 h-12 flex-shrink-0">
               <img :src="benefit.icon" :alt="benefit.title" class="w-full h-full object-contain" />
             </div>
-            <div class="flex-1">
-              <h3 class="text-sm font-semibold text-[#003B39] mb-1">
+            <div>
+              <h3 class="text-xs md:text-sm font-semibold text-[#003B39] mb-1">
                 {{ benefit.title }}
               </h3>
               <p class="text-xs text-[#003B39]">{{ benefit.description }}</p>

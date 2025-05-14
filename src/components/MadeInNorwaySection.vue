@@ -1,7 +1,9 @@
 <template>
   <div>
     <!-- Desktop layout -->
-    <section class="hidden md:flex text-white items-center h-[250px] container my-12 relative overflow-hidden">
+    <section
+      class="hidden md:flex md:px-10 lg:px-20 text-white items-center h-[250px] container my-12 relative overflow-hidden"
+    >
       <div
         class="mx-auto py-12 px-4 w-4/5 rounded-[32px] h-full z-10"
         style="background: linear-gradient(135.23deg, #2b2d6e 45.01%, #e4203e 99.93%)"
@@ -21,7 +23,7 @@
     </section>
 
     <!-- Mobile layout -->
-    <section class="flex flex-col md:hidden text-white items-center container mt-12 relative overflow-hidden">
+    <section class="flex flex-col md:hidden text-white items-center container my-6 relative overflow-hidden">
       <div class="flex z-10 items-center h-full -mb-8 mt-2 justify-center md:justify-end">
         <img src="/norway.png" :alt="sectionData.flagAlt" class="h-full" />
       </div>
@@ -34,7 +36,7 @@
             <h2 class="text-2xl md:text-3xl font-bold mb-4">
               {{ sectionData.title }}
             </h2>
-            <p class="mb-4">{{ sectionData.description }}</p>
+            <p class="mb-4 text-sm md:text-base">{{ sectionData.description }}</p>
           </div>
         </div>
       </div>

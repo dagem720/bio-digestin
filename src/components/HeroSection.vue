@@ -34,7 +34,7 @@
             background-position: left;
           "
         >
-          <h1 class="text-2xl text-start md:text-end md:text-3xl lg:text-5xl font-bold text-primary-dark mb-4">
+          <h1 class="text-2xl text-start md:text-end lg:text-3xl xl:text-5xl font-bold text-primary-dark mb-4">
             {{ heroData.title }}
           </h1>
           <p class="text-navy hidden md:block text-center md:text-right md:mb-8 text-sm md:text-lg break-words">
