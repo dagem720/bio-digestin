@@ -26,7 +26,7 @@
           </div>
         </div>
         <div
-          class="container order-1 p-5 md:order-2 h-full overflow-hidden md:-mt-44 md:pr-20 justify-center flex flex-col items-end"
+          class="container order-1 p-5 md:order-2 h-full overflow-hidden md:-mt-36 lg:-mt-44 pt-0 md:pt-20 lg:pt-0 md:pr-6 lg:pr-20 justify-center flex flex-col items-end"
           style="
             background-image: url('/Clip path group.png');
             background-size: cover;
@@ -34,7 +34,7 @@
             background-position: left;
           "
         >
-          <h1 class="text-2xl text-start md:text-end md:text-5xl font-bold text-primary-dark mb-4">
+          <h1 class="text-2xl text-start md:text-end md:text-3xl lg:text-5xl font-bold text-primary-dark mb-4">
             {{ heroData.title }}
           </h1>
           <p class="text-navy hidden md:block text-center md:text-right md:mb-8 text-sm md:text-lg break-words">

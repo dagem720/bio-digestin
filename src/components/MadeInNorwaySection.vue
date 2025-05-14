@@ -16,14 +16,14 @@
         </div>
       </div>
       <div class="flex items-center h-full -ml-3 mt-2 justify-center md:justify-end">
-        <img src="/Made in Norway Image.png" :alt="sectionData.flagAlt" class="h-full" />
+        <img src="/norway.png" :alt="sectionData.flagAlt" class="h-full" />
       </div>
     </section>
 
     <!-- Mobile layout -->
     <section class="flex flex-col md:hidden text-white items-center container mt-12 relative overflow-hidden">
       <div class="flex z-10 items-center h-full -mb-8 mt-2 justify-center md:justify-end">
-        <img src="/Made in Norway Image.png" :alt="sectionData.flagAlt" class="h-full" />
+        <img src="/norway.png" :alt="sectionData.flagAlt" class="h-full" />
       </div>
       <div
         class="mx-auto py-12 px-4 rounded-[32px] h-full"
