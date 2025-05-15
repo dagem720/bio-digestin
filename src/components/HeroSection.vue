@@ -26,7 +26,7 @@
           </div>
         </div>
         <div
-          class="container order-1 p-5 md:order-2 h-full overflow-hidden md:-mt-36 lg:-mt-44 pt-0 md:pt-20 lg:pt-0 md:pr-6 lg:pr-20 justify-center flex flex-col items-end"
+          class="container order-1 p-5 md:order-2 h-full overflow-hidden md:-mt-36 lg:-mt-44 pt-0 md:pt-24 lg:pt-16 md:pr-6 lg:pr-20 justify-center flex flex-col items-end"
           style="
             background-image: url('/Clip path group.png');
             background-size: cover;
@@ -34,25 +34,29 @@
             background-position: left;
           "
         >
-          <h1 class="text-2xl text-start md:text-end lg:text-3xl xl:text-5xl font-bold text-primary-dark mb-4">
-            {{ heroData.title }}
-          </h1>
-          <p class="text-navy hidden md:block text-center md:text-right md:mb-8 text-sm md:text-lg break-words">
-            {{ heroData.subtitle }}
-          </p>
+          <div class="flex flex-col items-end md:pr-16">
+            <h1 class="text-2xl text-start md:text-end lg:text-3xl xl:text-5xl font-bold text-primary-dark mb-4">
+              {{ heroData.title }}
+            </h1>
+            <p class="text-navy hidden md:block text-center md:text-right md:mb-8 text-sm md:text-lg break-words">
+              {{ heroData.subtitle }}
+            </p>
 
-          <a
-            :href="heroData.ctaLink"
-            style="
-              background: var(--Background-Button-Primary, #01a9ac);
-              box-shadow: 0px -2px 4px 0px #015f5d inset;
-              box-shadow: 0px 4px 4px 0px #98dcdd inset;
-              box-shadow: 0px 2px 8px 0px #00000040;
-            "
-            class="rounded-full hidden text-white px-6 py-3 md:inline-block hover:bg-primary-dark transition-colors"
-          >
-            {{ heroData.ctaText }}
-          </a>
+            <div>
+              <a
+                :href="heroData.ctaLink"
+                style="
+                  background: var(--Background-Button-Primary, #01a9ac);
+                  box-shadow: 0px -2px 4px 0px #015f5d inset;
+                  box-shadow: 0px 4px 4px 0px #98dcdd inset;
+                  box-shadow: 0px 2px 8px 0px #00000040;
+                "
+                class="rounded-full hidden text-white px-6 py-3 md:inline-block hover:bg-primary-dark transition-colors"
+              >
+                {{ heroData.ctaText }}
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

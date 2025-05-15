@@ -1,5 +1,5 @@
 <template>
-  <section id="free-trial" class="py-6 md:py-16 px-4 md:px-10 lg:px-20 bg-[#b2d7d7] md:bg-transparent">
+  <section id="free-trial" class="py-6 md:py-16 px-4 md:px-10 lg:px-20 md:bg-transparent">
     <div class="container mx-auto">
       <div class="flex flex-col items-start">
         <h2 class="text-lg uppercase md:text-3xl font-bold text-[#003B39] md:text-primary-dark text-center mb-2">

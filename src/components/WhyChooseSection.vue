@@ -1,7 +1,17 @@
 <template>
-  <div>
+  <div class="bg-[#b2d7d7]">
     <!-- Desktop layout -->
-    <section class="hidden md:block py-16 px-4 md:px-10 lg:px-20 bg-secondary-light">
+    <section class="hidden relative md:block py-8 lg:py-16 px-4 md:px-10 lg:px-20">
+      <div
+        class="absolute w-full h-full"
+        style="
+          background-image: url('/Group (1).png');
+          background-position: right 0px top -40px;
+          background-repeat: no-repeat;
+          background-size: 40% 100%;
+          opacity: 0.1;
+        "
+      ></div>
       <div class="container mx-auto">
         <h2 class="text-3xl font-bold text-primary-dark text-center mb-4">
           {{ sectionData.title }}
@@ -26,7 +36,7 @@
               <h3 class="text-lg font-semibold mb-2" :class="benefit.highlighted ? 'text-primary' : 'text-white'">
                 {{ benefit.title }}
               </h3>
-              <p :class="benefit.highlighted ? 'text-primary' : 'text-white'">
+              <p :class="benefit.highlighted ? 'text-[#003B39] font-semibold text-lg' : 'text-white'">
                 {{ benefit.description }}
               </p>
             </div>
@@ -36,7 +46,17 @@
     </section>
 
     <!-- Mobile layout -->
-    <section class="md:hidden py-6 px-4 bg-[#b2d7d7]">
+    <section class="md:hidden relative py-6 px-4 bg-[#b2d7d7]">
+      <div
+        class="absolute w-full h-full"
+        style="
+          background-image: url('/Group (1).png');
+          background-position: right 0px top -40px;
+          background-repeat: no-repeat;
+          background-size: 70% 100%;
+          opacity: 0.1;
+        "
+      ></div>
       <div class="container mx-auto">
         <h2 class="text-lg font-bold text-[#003B39] text-center mb-2">
           {{ sectionData.title }}

@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Desktop layout -->
-    <section class="hidden md:block py-16 px-4 md:px-10 lg:px-20 bg-white">
+    <section class="hidden md:block py-16 px-4 md:px-10 lg:px-20 bg-[#b2d7d7]">
       <div class="container mx-auto">
         <div class="flex justify-between">
           <h2 class="text-3xl font-bold text-primary-dark text-left mb-12">
@@ -15,7 +15,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div v-for="(step, index) in sectionData.steps" :key="index" class="rounded-lg overflow-hidden">
+          <div v-for="(step, index) in sectionData.steps" :key="index" class="rounded-lg bg-white overflow-hidden">
             <div class="h-48 overflow-hidden">
               <img :src="step.image" :alt="step.title" class="w-full h-full object-cover" />
             </div>
@@ -41,10 +41,10 @@
 
         <div class="space-y-6">
           <div v-for="(step, index) in sectionData.steps" :key="index" class="bg-white flex rounded-lg overflow-hidden">
-            <div class="h-32 overflow-hidden" :class="{ 'order-2': index == 1 }">
+            <div class="h-32 overflow-hidden w-2/5" :class="{ 'order-2': index == 1 }">
               <img :src="step.image" :alt="step.title" class="w-full h-full object-cover" />
             </div>
-            <div class="p-4 flex flex-col justify-center">
+            <div class="p-4 flex flex-col justify-center w-3/5">
               <h3 class="text-lg font-semibold text-[#01A9AC] mb-1">STEP {{ index + 1 }}</h3>
               <p class="text-xs text-[#003B39]">{{ step.description }}</p>
             </div>

@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-[#FFFDF8] lg:px-10">
+  <header class="lg:px-10 relative z-10 bg-transparent">
     <div class="container mx-auto py-4 px-4 flex items-center justify-between">
       <div class="logo flex items-center">
         <!-- {{ headerSection }} -->

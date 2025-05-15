@@ -2,7 +2,17 @@
   <section class="py-6 px-4 md:px-10 lg:px-20 bg-[#b2d7d7]">
     <div class="container mx-auto">
       <!-- Mobile layout -->
-      <div class="md:hidden">
+      <div class="md:hidden relative">
+        <div
+          class="absolute w-full h-full"
+          style="
+            background-image: url('/Group (1).png');
+            background-position: right 0px top -40px;
+            background-repeat: no-repeat;
+            background-size: 70% 100%;
+            opacity: 0.1;
+          "
+        ></div>
         <h2 class="text-lg font-bold text-[#003B39] text-center mb-2">
           {{ sectionData.title }}
         </h2>
@@ -36,7 +46,17 @@
       </div>
 
       <!-- Desktop layout -->
-      <div class="hidden md:block">
+      <div class="hidden md:block relative">
+        <div
+          class="absolute w-full h-full"
+          style="
+            background-image: url('/Group (1).png');
+            background-position: right 0px top -40px;
+            background-repeat: no-repeat;
+            background-size: 40% 100%;
+            opacity: 0.1;
+          "
+        ></div>
         <div class="flex justify-end">
           <div>
             <h2 class="text-3xl font-bold text-primary-dark text-center mb-2">
@@ -50,13 +70,13 @@
 
         <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div v-for="(benefit, index) in sectionData.benefits" :key="index" class="text-center">
-            <div class="w-20 h-20 mx-auto mb-4">
+            <div class="w-16 h-16 mx-auto mb-4">
               <img :src="benefit.icon" :alt="benefit.title" class="w-full h-full object-contain" />
             </div>
-            <h3 class="text-lg font-semibold text-navy mb-2">
+            <h3 class="text-sm font-semibold text-navy mb-2">
               {{ benefit.title }}
             </h3>
-            <p class="text-navy-light">{{ benefit.description }}</p>
+            <p class="text-navy-light text-sm">{{ benefit.description }}</p>
           </div>
           <div class="col-span-2 flex flex-col justify-center">
             <p class="text-navy-light">

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="bg-[#b2d7d7] py-6 lg:py-12">
     <!-- Desktop layout -->
     <section
-      class="hidden md:flex md:px-10 lg:px-20 text-white items-center h-[250px] container my-12 relative overflow-hidden"
+      class="hidden md:flex md:px-10 lg:px-20 text-white items-center h-[250px] container relative overflow-hidden"
     >
       <div
         class="mx-auto py-12 px-4 w-4/5 rounded-[32px] h-full z-10"
