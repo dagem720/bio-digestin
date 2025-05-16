@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#b2d7d7]">
     <!-- Desktop layout -->
-    <section class="hidden relative md:block py-8 lg:py-16 px-4 md:px-10 lg:px-20">
+    <section class="hidden relative md:block py-8 lg:py-16 px-4 md:px-10 lg:px-20 overflow-hidden">
       <div
         class="absolute w-full h-full"
         style="
@@ -46,7 +46,7 @@
     </section>
 
     <!-- Mobile layout -->
-    <section class="md:hidden relative py-6 px-4 bg-[#b2d7d7]">
+    <section class="md:hidden relative py-6 px-4 bg-[#b2d7d7] overflow-hidden">
       <div
         class="absolute w-full h-full"
         style="
